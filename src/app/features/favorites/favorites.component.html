@@ -1,0 +1,27 @@
+<section class="favorites">
+  <h1 class="favorites__title creepster-regular font-styled">FAVORITOS</h1>
+
+  <div class="characters__result">
+    <div class="result__list">
+      @for(character of characters$ | async ; track character.id; let i =
+      $index) {
+      <app-card
+        [id]="character.id"
+        [name]="character.name"
+        [species]="character.species"
+        [image]="character.image"
+        [isFavorite]="true"
+        (onClickFavorite)="removeFromFavorites(i)"
+      />
+      }
+    </div>
+
+    @if((characters$ | async)?.length === 0) {
+    <app-empty
+      title="Parece que você ainda não tem favoritos"
+      description="Volte à página inicial e escolha os melhores para você."
+      [showBackButton]="true"
+    />
+    }
+  </div>
+</section>

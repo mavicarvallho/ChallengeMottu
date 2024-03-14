@@ -1,0 +1,26 @@
+<div class="card">
+  <button
+    class="card__favorite-btn"
+    [ngClass]="{ 'btn--active': isFavorite }"
+    (click)="handleClickFavorite()"
+  >
+    <img
+      width="20px"
+      height="20px"
+      class="favorite-btn__icon"
+      [src]="
+        isFavorite
+          ? 'assets/images/icons/heart-fill.svg'
+          : 'assets/images/icons/heart.svg'
+      "
+      alt="Ícone de favoritar"
+    />
+  </button>
+
+  <img [src]="image" [alt]="name" class="card__image" />
+
+  <div class="card__details">
+    <p class="details__name creepster-regular">{{ name }}</p>
+    <p class="details__species">{{ species }}</p>
+  </div>
+</div>

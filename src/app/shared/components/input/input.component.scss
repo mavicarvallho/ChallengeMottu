@@ -1,0 +1,22 @@
+.input__label {
+  margin-left: 12px;
+  padding: 0 6px;
+  background-color: var(--color-core-background);
+  font-size: 12px;
+  position: relative;
+  z-index: 1;
+  color: var(--color-neutral-content);
+}
+
+.input__field {
+  width: calc(100% - 36px);
+  height: 48px;
+  margin-top: -12px;
+  padding: 0 18px;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid var(--color-core-border);
+  color: var(--color-neutral-content-higher);
+  border-radius: 8px;
+  font-size: 16px;
+}

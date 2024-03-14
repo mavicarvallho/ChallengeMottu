@@ -1,0 +1,76 @@
+.header {
+  width: calc(100vw - 64px);
+  height: 80px;
+  background-color: var(--color-core-foreground);
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.header__logo {
+  height: 100%;
+}
+
+.nav__buttons {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.buttons__btn {
+  height: 40px;
+  padding: 0 10px;
+  background-color: transparent;
+  border: 1px solid var(--color-core-border);
+  color: var(--color-neutral-content);
+  cursor: pointer;
+  font-family: Poppins;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn--left {
+  border-radius: 8px 0 0 8px;
+}
+
+.btn--right {
+  border-radius: 0 8px 8px 0;
+}
+
+.btn--active {
+  background-color: var(--color-neutral-surface);
+  color: #000;
+
+  .btn__icon {
+    filter: brightness(0);
+  }
+}
+
+.btn__counter {
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-neutral-surface);
+  border: 1px solid var(--color-core-border);
+  border-radius: 50%;
+}
+
+.counter__number {
+  color: #000;
+}
+
+.btn__text {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .btn__text {
+    display: inline;
+  }
+}
